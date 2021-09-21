@@ -1,0 +1,7 @@
+ curl -XPUT "http://127.0.0.1:9200/index_name/_mapping" -H 'content-type: application/json'   -d'{
+  "properties": {
+    "trades.security": {
+      "type": "flattened"
+    }
+  }
+}'
