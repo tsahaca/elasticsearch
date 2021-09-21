@@ -10,3 +10,19 @@
 
 3.  curl -XPUT "http://127.0.0.1:9200/index_name/_doc/1" -H 'content-type: application/json'  -d @data.json
 
+4. curl -XPOST "http://127.0.0.1:9200/index_name/_update/1" -d'{
+    "doc" : {
+        "trades.security" : {
+          "exChange": "NASDAQ",
+          "etf":"NASDAQ 100"
+        }
+    }
+}'
+
+5. curl -XGET "http://127.0.0.1:9200/index_name/_search?pretty=true" -H 'content-type: application/json' -d'{
+  "query": {
+    "term": {
+      "trades.security": "NASDAQ 100"
+    }
+  }
+}'
