@@ -26,3 +26,11 @@
     }
   }
 }'
+
+6. curl -XGET "http://127.0.0.1:9200/index_name/_search?pretty=true" -d'{
+  "query": {
+    "term": {
+      "trades.security.etf": "NASDAQ 100"
+    }
+  }
+}'
