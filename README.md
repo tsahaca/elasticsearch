@@ -24,6 +24,7 @@ POST _bulk
 {"id" : 4,"name" : "Alan Thomas","email" : "athomas2@example.com","gender" : "male","ip_address" : "200.47.210.95","date_of_birth" : "11/12/1985","company" : "Yamaha","position" : "Resources Manager","experience" : 12,"country" : "China","phrase" : "Emulation of roots heuristic coherent systems","salary" : 300000}
 ```
 
+```
 POST employees/_search
 {
   "query": {
@@ -34,7 +35,9 @@ POST employees/_search
     }
   }
 }
+```
 
+```
 POST employees/_search
 {
   "query": {
@@ -45,7 +48,9 @@ POST employees/_search
     }
   }
 }
+```
 
+```
 POST employees/_search
 {
   "query": {
@@ -57,7 +62,9 @@ POST employees/_search
     }
   }
 }
+```
 
+```
 POST employees/_search
 {
   "query": {
@@ -69,3 +76,4 @@ POST employees/_search
     }
   }
 }
+```
