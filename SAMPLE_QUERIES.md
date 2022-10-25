@@ -1,7 +1,10 @@
 # Sample Queries
 
 ```
-GET /INDEX_NAME/_count
+. OR is spelled should
+. AND is spelled must
+. NOR is spelled should_not
+. GET /INDEX_NAME/_count
 
 GET /INDEX_NAME/_search
  {
@@ -20,6 +23,18 @@ GET /INDEX_NAME/_search
      "bool": {
        "must": [
          { "match": { "ID_ONE": 1228373 } }
+       ]
+     }
+   }
+ }
+ 
+ GET /INDEX_NAME/_search
+ {
+   "query": {
+     "bool": {
+       "should": [
+         { "match": { "ID_ONE": 1228373 } },
+         { "match": { "ID_ONE": 675857 } }
        ]
      }
    }
