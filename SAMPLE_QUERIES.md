@@ -1,12 +1,12 @@
 # Sample Queries
 
-* OR is spelled should
-* AND is spelled must
-* NOR is spelled should_not
-* GET /INDEX_NAME/_count
-
+* **OR** is spelled should
+* **AND** is spelled must
+* **NOR** is spelled should_not
 
 ```
+GET /INDEX_NAME/_count
+
 GET /INDEX_NAME/_search
  {
    "query": {
